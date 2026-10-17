@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Enter your name 
+    <input type="text" id="t1" class="x1">
+    <button onclick="demo()">Click me</button>
+<hr>
+<p id="p1" class="x1"></p>
+    <script>
+function demo(){
+ //  a = t1.value;
+ //  p1.innerHTML = a;
+  // p1.innerText = a;
+
+ // a = document.getElementById('t1').value;
+ //  document.getElementById('p1').innerHTML = a;
+
+ //a = document.getElementsByClassName("x1")[0].value
+// document.getElementsByClassName("x1")[1].innerHTML = a;
+
+a = document.getElementsByTagName("input")[0].value;
+document.getElementsByTagName("p")[0].innerHTML = a;
+}
+    </script>
+</body>
+</html>

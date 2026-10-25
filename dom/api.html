@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // arrow function se jab bhi kuch print kiya jata hai to uske ander kuch likha jata hai ((e)=>{})
+
+        // console.log("hello");
+
+        // let res = fetch("https://jsonplaceholder.typicode.com/users")
+        // console.log(res);
+        // res.then((r)=>r.json()).then((d)=>console.log(d).catch((e)=>console.log(e))
+        // )
+
+        const fetchData = async()=>{
+            try{
+                 const res = await fetch("ttps://jsonplaceholder.typicode.com/users")
+            let c =  await res.json()
+            console.log(c)
+            }
+            catch(error){
+                console.log("this is my error");
+            }
+        }
+        fetchData()
+        
+    </script>
+</body>
+</html>

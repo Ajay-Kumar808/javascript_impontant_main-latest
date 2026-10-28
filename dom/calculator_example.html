@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #outer{
+            height: 490px;
+            width: 350px;
+            background-color: black;
+            margin: 100px auto;
+            border-radius: 12px;
+            
+        }
+        #box{
+            width: 90%;
+            height: 40px;
+            margin-top: 20px;
+            margin-left: 15px;
+        }
+        #btn{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 10px;
+           margin: 50px 0px 0px 17px;
+        }
+        #btn>button{
+          height: 60px;
+          width: 60px;
+          border-radius: 10px;
+          border: none;
+          outline: none;
+        }
+        .abc{
+            background-color: rgb(235, 157, 13);
+            color: white;
+        }
+        #box{
+           text-align: end;
+        }
+    </style>
+</head>
+<body>
+    <div id="outer">
+        <input type="text" id="box" value="">
+        <div id="btn">
+            <button class="abc" onclick="ac()">AC</button>
+            <button class="abc" onclick="del()">DEL</button>
+            <button class="abc" onclick="press('%')">%</button>
+            <button class="abc" onclick="press('/')">/</button>
+            <button onclick="press(7)">7</button>
+            <button onclick="press(8)">8</button>
+            <button onclick="press(9)">9</button>
+            <button class="abc" onclick="press('*')">*</button>
+            <button onclick="press(4)">4</button>
+            <button onclick="press(5)">5</button>
+            <button onclick="press(6)">6</button>
+            <button class="abc" onclick="press('-')">-</button>
+            <button onclick="press(1)">1</button>
+            <button onclick="press(2)">2</button>
+            <button onclick="press(3)">3</button>
+            <button class="abc" onclick="press('+')">+</button>
+            <button onclick="press('00')">00</button>
+            <button onclick="press(0)">0</button>
+            <button onclick="press('.')">.</button>
+            <button class="abc" onclick="result()">=</button>
+        </div>
+    </div>
+
+    <script>
+    const box = document.getElementById('box')
+    console.log(box)
+  function press(x){
+   box.value += x
+    console.log("hi ajay")
+  }
+
+  function ac(){
+    box.value = ""
+    console.log("ji")
+  }
+function del(){
+    box.value = box.value.slice(0,-1)
+    console.log("hi")
+}
+
+function result(){
+    try {
+        box.value = eval(box.value)
+    } catch (error) {
+        console.log("error")
+    }
+}
+
+  
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        #clock{
+            color: white;
+            font-size: 4rem;
+            font-family: monospace;
+            border: 8px solid transparent;
+            border-image: liner-gradient(
+                90deg, rgb(204,25,55),yellow,purple)1;
+            box-shadow: 0px 0px 15px red,yellow;
+            background: black;
+        }
+        body{
+          display: flex;  
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div id="clock">00:00:00</div>
+
+    <script>
+        function showTime(){
+            let clock = document.getElementById('clock')
+            let date = new Date()
+            let timer = date.toLocaleTimeString()
+            clock.innerText = timer
+
+        }
+        setInterval(showTime,1000)
+    </script>
+</body>
+</html>

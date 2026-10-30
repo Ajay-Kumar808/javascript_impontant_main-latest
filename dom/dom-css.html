@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    #box{
+        width: 100vw;
+        height: 100vh;
+        border: 1px solid;
+    }
+    .darkMode{
+        background-color: black;
+    }
+   </style>
+</head>
+<body>
+    <div id="box">
+        <button onclick="changeTheme()">DarkMode</button>
+    </div>
+
+    <script>
+      let box = document.getElementById('box')
+
+      function changeTheme(){ 
+          //  /* classList ke four method hote hai contains,add,remove,toggle*/
+          
+        // if(box.classList.contains("darkMode")){      
+            // box.classList.remove("darkMode")
+        // }
+        // else{
+        //     box.classList.add("darkMode")
+        // }
+        box.classList.toggle("darkMode")
+      }
+    </script>
+</body>
+</html>

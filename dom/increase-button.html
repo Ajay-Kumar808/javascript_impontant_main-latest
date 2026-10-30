@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Count:- <span id="count">00</span> </h1>
+    <button onclick="demo1()">+</button>
+    <button onclick="demo2()">-</button>
+
+    <script>
+     let count = document.getElementById('count')
+     console.log(count)
+
+     let a = 0;
+     function demo1(){
+        a++;
+        console.log(a)
+        count.innerText = a
+     }
+     function demo2(){
+    //    a--;
+    //    count.innerText = a
+
+    if (a > 0) {
+        a--;
+    }
+    console.log(a);
+    count.innerText = a;
+}
+    </script>
+</body>
+</html>

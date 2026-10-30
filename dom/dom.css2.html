@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="parentBox">
+        <h1>First heading</h1>
+    </p>
+
+    <script>
+        let heading2 = document.createElement('h2')
+        let heading3 = document.createElement('h3')
+       
+        heading2.innerText = "heading second"
+        // parentBox.appendChild(heading2)  /* appendChild se kisi element ke baad add hota hai */
+        parentBox.prepend(heading2)  /* prepend se kisi element ke phle add hota hai */
+    </script>
+</body>
+</html>

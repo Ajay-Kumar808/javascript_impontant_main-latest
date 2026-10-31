@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const login = ()=>{
+            return promise = new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                    console.log("User logged in")
+                    resolve()
+                },1000)
+            })
+        }
+
+        const fetchProfile = ()=>{
+           return promise = new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                    console.log("Profile Fetched")
+                    resolve()
+                },2000)
+            })
+        }
+        const order =()=>{
+              return promise = new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                    console.log("Order Placed")
+                    resolve()
+                },3000)
+            })
+        }
+
+        login()
+        .then(()=>fetchProfile())
+        .then(()=>order())
+        .catch((e)=> console.log(e))
+    </script>
+</body>
+</html>

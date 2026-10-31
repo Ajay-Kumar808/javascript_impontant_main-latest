@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer-box{
+            width: 500px;
+            height: 400px;
+            margin: 100px auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+           
+        }
+        .outer-in-box{
+            width: 400px;
+            height: 260px;
+            border: 1px solid;
+          
+        }
+        .outer-in-box>img{
+           width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .box1{
+            width: 120px;
+            height: 140px;
+            border: 1px solid;
+        }
+        .box1>img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .big-box{
+            display: flex;
+        }
+     
+    </style>
+</head>
+<body>
+    <div class="outer-box">
+        <div class="outer-in-box"></div>
+        <div class="big-box">
+            <div class="box1" >
+                <img id="red" src="https://www.spinny.com/blog/wp-content/uploads/2024/09/videoframe_0.webp" alt="">
+            </div>
+            <div class="box1"> 
+                 <img id="yellow" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiCJk54YYHrtUsBb1s_oTgkjhevU-JiS_bk9kB5e4V6y3HGa1Y-eL4nq0e&s=10" alt="">
+            </div>
+            <div class="box1">
+                 <img  id="pink" src="https://static.vecteezy.com/system/resources/thumbnails/053/733/179/small/every-detail-of-a-sleek-modern-car-captured-in-close-up-photo.jpg" alt="">
+            </div>
+            <div class="box1">
+                 <img id="blue" src="https://i.pinimg.com/736x/6f/3c/e3/6f3ce3d3a99dbd85a78a8f540b75cb75.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <script>
+       let outer = document.querySelector('.outer-in-box')
+       console.log(outer)
+
+       let boxes = document.querySelectorAll('.box1')
+       console.log(boxes)
+  
+       outer.textContent = "hi"
+       
+     
+           boxes.forEach(function(e){
+               e.addEventListener('click',function(b){
+                console.log("hi")
+                console.log(b.target)
+                if(b.target.id=='red'){
+                outer.style.backgroundImage = "url('https://www.spinny.com/blog/wp-content/uploads/2024/09/videoframe_0.webp')"
+                outer.style.backgroundSize = "100% 100%"
+                }
+                else if(b.target.id=='yellow'){
+                 outer.style.backgroundImage = "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiCJk54YYHrtUsBb1s_oTgkjhevU-JiS_bk9kB5e4V6y3HGa1Y-eL4nq0e&s=10')"
+
+                }
+                else if(b.target.id=='pink'){
+                 outer.style.backgroundImage = "url('https://static.vecteezy.com/system/resources/thumbnails/053/733/179/small/every-detail-of-a-sleek-modern-car-captured-in-close-up-photo.jpg')"
+
+                }
+                else if(b.target.id=='blue'){
+                 outer.style.backgroundImage = "url('https://i.pinimg.com/736x/6f/3c/e3/6f3ce3d3a99dbd85a78a8f540b75cb75.jpg')"
+
+                }
+               })
+           })
+      
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="text" placeholder="Enter your name">
+    <button onclick="demo()">Add</button>
+    <ul id="store">
+        <li>Ajay</li>
+    </ul>
+
+    <script>
+      let texts = document.getElementById('text')
+      console.log(texts)
+
+      let stores = document.getElementById('store')
+      console.log(stores)
+
+      function demo(){
+           console.log(texts.value)
+           let li = document.createElement('li')
+           console.log(li)
+           li.innerText = texts.value
+
+           stores.appendChild(li)
+      }
+
+    </script>
+</body>
+</html>
